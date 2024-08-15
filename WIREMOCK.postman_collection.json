@@ -1,14 +1,13 @@
 {
 	"info": {
-		"_postman_id": "28f32948-4ae9-49cc-8f98-807a3bdc2ac3",
+		"_postman_id": "a0e0f283-8739-4cb5-aea6-8caed582a6be",
 		"name": "WIREMOCK",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "37660383",
-		"_collection_link": "https://gold-flare-33997-1.postman.co/workspace/WIREMOCK_HOMO_API~cb3bb590-bae9-4de8-9d4e-cedc03414dbe/collection/22231185-28f32948-4ae9-49cc-8f98-807a3bdc2ac3?action=share&source=collection_link&creator=37660383"
+		"_exporter_id": "37660383"
 	},
 	"item": [
 		{
-			"name": "para cargar Mocks",
+			"name": "Para cargar Mocks",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -22,9 +21,9 @@
 					"raw": "{\r\n  \"request\": {\r\n    \"method\": \"POST\",\r\n    \"url\": \"/adhesion_servicio_post\",\r\n    \"bodyPatterns\": [\r\n      {\r\n        \"matches\": \".*<idUsuario>4594725<\\\\/idUsuario>.*\"\r\n      }\r\n    ]\r\n  },\r\n  \"response\": {\r\n    \"status\": 200,\r\n    \"headers\": {\r\n      \"Content-Type\": \"text/xml\"\r\n    },\r\n    \"body\": \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?><soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"><soap:Body><ns0:adherirEnteSinBaseResponse xmlns:ns1=\\\"http://request.pagos.ws.linkpagos.link.com.ar/\\\" xmlns:ns3=\\\"http://request.ws.backservices.link.com.ar/\\\" xmlns:ns2=\\\"http://request.ws.8.backservices.link.com.ar/\\\" xmlns:ns0=\\\"http://services.pagos.ws.linkpagos.link.com.ar/\\\"><respuestaAdherirEnteSinBase><ns2:cabecera><timeStamp>20240314134617527</timeStamp></ns2:cabecera><codigoResultado>00</codigoResultado><descripcionResultado>OK</descripcionResultado><ususarioLP>0002081</ususarioLP><codigoAdhesion>01</codigoAdhesion><ente><codigo>919</codigo><descripcion>La Cumbre Golf Club</descripcion><manejaBaseDeudas>false</manejaBaseDeudas><manejaMultiplesConceptos>false</manejaMultiplesConceptos><manejaIngresoReferencia>false</manejaIngresoReferencia><manejaIngresoImportes>true</manejaIngresoImportes><habilitado>true</habilitado><rubro><codigo>13</codigo><descripcion>Clubes y Asociaciones</descripcion><descripcionAbreviada>CLUB</descripcionAbreviada></rubro></ente></respuestaAdherirEnteSinBase></ns0:adherirEnteSinBaseResponse></soap:Body></soap:Envelope>\"\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "{{UrlWireMock}}/__admin/mappings",
+					"raw": "{{UrlWireMockTest}}/__admin/mappings",
 					"host": [
-						"{{UrlWireMock}}"
+						"{{UrlWireMockTest}}"
 					],
 					"path": [
 						"__admin",
@@ -35,7 +34,7 @@
 			"response": []
 		},
 		{
-			"name": "para pisar Mock existente",
+			"name": "Para pisar Mock existente",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -49,9 +48,9 @@
 					"raw": "{\r\n  \"request\": {\r\n    \"method\": \"POST\",\r\n    \"url\": \"/adhesion_servicio_post\",\r\n    \"bodyPatterns\": [\r\n      {\r\n        \"matches\": \".*<idUsuario>4594725<\\\\/idUsuario>.*\"\r\n      }\r\n    ]\r\n  },\r\n  \"response\": {\r\n    \"status\": 200,\r\n    \"headers\": {\r\n      \"Content-Type\": \"text/xml\"\r\n    },\r\n    \"body\": \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?><soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"><soap:Body><ns0:adherirEnteSinBaseResponse xmlns:ns1=\\\"http://request.pagos.ws.linkpagos.link.com.ar/\\\" xmlns:ns3=\\\"http://request.ws.backservices.link.com.ar/\\\" xmlns:ns2=\\\"http://request.ws.8.backservices.link.com.ar/\\\" xmlns:ns0=\\\"http://services.pagos.ws.linkpagos.link.com.ar/\\\"><respuestaAdherirEnteSinBase><ns2:cabecera><timeStamp>20240314134617527</timeStamp></ns2:cabecera><codigoResultado>00</codigoResultado><descripcionResultado>OK</descripcionResultado><ususarioLP>0002081</ususarioLP><codigoAdhesion>01</codigoAdhesion><ente><codigo>919</codigo><descripcion>La Cumbre Golf Club</descripcion><manejaBaseDeudas>false</manejaBaseDeudas><manejaMultiplesConceptos>false</manejaMultiplesConceptos><manejaIngresoReferencia>false</manejaIngresoReferencia><manejaIngresoImportes>true</manejaIngresoImportes><habilitado>true</habilitado><rubro><codigo>13</codigo><descripcion>Clubes y Asociaciones</descripcion><descripcionAbreviada>CLUB</descripcionAbreviada></rubro></ente></respuestaAdherirEnteSinBase></ns0:adherirEnteSinBaseResponse></soap:Body></soap:Envelope>\"\r\n  }\r\n}\r\n"
 				},
 				"url": {
-					"raw": "{{UrlWireMock}}/__admin/mappings/COMPLETAR_CON_ID_MOCK",
+					"raw": "{{UrlWireMockTest}}/__admin/mappings/COMPLETAR_CON_ID_MOCK",
 					"host": [
-						"{{UrlWireMock}}"
+						"{{UrlWireMockTest}}"
 					],
 					"path": [
 						"__admin",
@@ -63,7 +62,7 @@
 			"response": []
 		},
 		{
-			"name": "para salvar Mock creados",
+			"name": "Para salvar Mock creados",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -77,9 +76,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{UrlWireMock}}/__admin/mappings/save",
+					"raw": "{{UrlWireMockTest}}/__admin/mappings/save",
 					"host": [
-						"{{UrlWireMock}}"
+						"{{UrlWireMockTest}}"
 					],
 					"path": [
 						"__admin",
@@ -98,7 +97,7 @@
 			"response": []
 		},
 		{
-			"name": "para consultar los mock existentes",
+			"name": "Para consultar los Mock existentes",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -115,9 +114,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{UrlWireMock}}/__admin/mappings",
+					"raw": "{{UrlWireMockTest}}/__admin/mappings",
 					"host": [
-						"{{UrlWireMock}}"
+						"{{UrlWireMockTest}}"
 					],
 					"path": [
 						"__admin",
@@ -128,7 +127,7 @@
 			"response": []
 		},
 		{
-			"name": "para eliminar Mock usando IdMock",
+			"name": "Para eliminar Mock usando IdMock",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -142,9 +141,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{UrlWireMock}}/__admin/mappings/CARGAR_ID",
+					"raw": "{{UrlWireMockTest}}/__admin/mappings/CARGAR_ID",
 					"host": [
-						"{{UrlWireMock}}"
+						"{{UrlWireMockTest}}"
 					],
 					"path": [
 						"__admin",
@@ -154,6 +153,12 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "UrlWireMock",
+			"value": "http://10.10.8.210:8080"
 		}
 	]
 }
